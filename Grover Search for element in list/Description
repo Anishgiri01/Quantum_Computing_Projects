@@ -1,1 +1,6 @@
+Grover's algorithm, proposed by Lov Grover in 1996, is a quantum algorithm that finds with high probability the unique input to a black box function
+that produces a particular output value, using just O(√N) evaluations of the function, where N is the size of the function's domain.
 
+In the context of searching an element in an unsorted list (or database), this algorithm provides a significant speedup over classical algorithms.
+A classical search would need to check each element one by one, therefore having a linear time complexity O(N), while Grover's algorithm can do
+this in a quadratic speedup time complexity of O(√N).
