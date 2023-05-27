@@ -87,13 +87,13 @@ def grover_search(element_list, element):
     return index
 
 # Example usage
-element_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P','Q','R', 'S']
+element_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P','Q','R', 'S'] #does not have to be sorted.
 element = 'O'
 index = grover_search(element_list, element)
 print(f"The index of '{element}' in the list is: {index}")
 
 
-# In[ ]:
+
 
 
 
