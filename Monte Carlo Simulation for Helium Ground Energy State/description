@@ -1,0 +1,4 @@
+Here's a a Monte Carlo simulation for estimating the ground state energy of a helium atom in Fortran.
+
+In this code, parameters z and b are varied to generate a plot of ground state energy of Helium as a function of z and b. An output file
+if generated (attached in the repo). To plot the graph, a python code is used. 
