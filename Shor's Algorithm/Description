@@ -1,0 +1,26 @@
+Shor's Algorithm is a quantum algorithm (an algorithm which runs on a quantum computer) for integer factorization formulated by 
+Peter Shor in 1994. Integer factorization is the decomposition of a composite number into smaller integers that, when multiplied, 
+give the original number. This is a problem that is thought to be hard for classical computers, especially as the size of numbers grows.
+
+Shor's algorithm, however, can solve this problem exponentially faster than the best known algorithm for a classical computer. 
+This speedup has significant implications, especially for the field of cryptography, because many popular cryptographic algorithms 
+(like RSA) rely on the fact that factorizing large numbers is computationally difficult for classical computers.
+
+Here's a high-level overview of how Shor's algorithm works:
+
+Random selection: The algorithm begins by choosing a random number less than the number to be factored (let's call it N).
+
+Check if coprime: Check if this number is coprime with N (their greatest common divisor is 1). If it's not, we've found a 
+factor and we can stop here. If it is, we continue with this number (let's call it x).
+
+Period finding: The key to Shor's algorithm is in finding the period of the function f(a) = x^a mod N, which is a periodic function. 
+Here is where quantum mechanics comes in: we initialize a quantum system in a superposition of states, each representing a different 
+number a, and then use a quantum Fourier transform to find the period of the function.
+
+Factor finding: Once we have found the period (let's call it r), we can compute the factors of N as the greatest common divisor of N 
+and both x^(r/2) + 1 and x^(r/2) - 1. If r is odd or if x^(r/2) is a multiple of N, then this step will fail and we have to start again 
+with a new random x.
+
+Step 3 is the crux of the algorithm where the quantum Fourier transform, a key operation in many quantum algorithms, is used. 
+It's important to note that while Shor's algorithm is theoretically very powerful, implementing it on a physical quantum computer 
+is still a significant challenge due to issues like quantum decoherence and the limited number of qubits available on current machines.
